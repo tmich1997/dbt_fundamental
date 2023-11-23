@@ -9,7 +9,7 @@ with payments as (
         created as created_at
 
 
-    from dbt_raw.stripe.payment
+    from {{ source('stripe', 'payment')}}
 )
 
 select *
